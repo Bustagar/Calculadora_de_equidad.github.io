@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Equidad de Poder Adquisitivo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Tarjeta principal de la calculadora -->
+    <div class="card">
+        <h2>Calculadora Equitativa</h2>
+        
+        <label for="montoBase">Monto Base en EE. UU. ($ USD):</label>
+        <input type="number" id="montoBase" value="100" oninput="calcularEnvio()">
+
+        <label for="paisDestino">Selecciona el País Destino:</label>
+        <select id="paisDestino" onchange="calcularEnvio()">
+            <option value="">Cargando países desde Google Sheets...</option>
+        </select>
+
+        <div class="result" id="resultadoUSD">
+            Monto ajustado: $0.00 USD
+        </div>
+        
+        <div class="result-local" id="resultadoLocal">
+            Equivalente local: 0.00
+        </div>
+    </div>
+
+    <!-- Bloque del logo institucional en la parte inferior sobre el fondo azul -->
+    <div class="footer-logo-container">
+        <img src="/Logo Asamblea  ingles.png" alt="Middle Assembly de las Naciones" class="logo-institucional">
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
